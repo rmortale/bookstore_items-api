@@ -26,8 +26,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rmortale/bookstore_oauth-go v0.0.0-20220709175719-c4ea8dd78b26 h1:n/Mm/oYAqsNoD+VQtZeknvurjJW0zQfXyt1W0n6pDrU=
 github.com/rmortale/bookstore_oauth-go v0.0.0-20220709175719-c4ea8dd78b26/go.mod h1:QbrCzytWUjngcSTVHNkb2cJkd2Okcx5BSDTgzdKdXPE=
-github.com/rmortale/bookstore_utils-go v0.0.0-20220709184127-aa67bfa66b1b h1:UO8+iKbm48/1c/Y6fPwjXroLaeZZn6egH7wN0Fh8yf0=
-github.com/rmortale/bookstore_utils-go v0.0.0-20220709184127-aa67bfa66b1b/go.mod h1:zsJEeDYLNQJ6u1pXbzRgbBioKLIj0dPFkfVFa14q+hI=
+github.com/rmortale/bookstore_utils-go v0.0.0-20220711194907-1f7e89073af8 h1:nD6gEJhm2sUosfZD0T+ii5jRKUSuMRkrTcB0BDPmr7A=
+github.com/rmortale/bookstore_utils-go v0.0.0-20220711194907-1f7e89073af8/go.mod h1:zsJEeDYLNQJ6u1pXbzRgbBioKLIj0dPFkfVFa14q+hI=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
