@@ -2,6 +2,7 @@ package app
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/rmortale/bookstore_items-api/clients/elasticsearch"
 	"net/http"
 )
 
@@ -10,8 +11,9 @@ var (
 )
 
 func StartApplication() {
-	mapUrls()
+	elasticsearch.InitClient()
 
+	mapUrls()
 	srv := &http.Server{
 		Handler: router,
 		Addr:    "127.0.0.1:8080",
