@@ -11,9 +11,10 @@ var (
 )
 
 func StartApplication() {
-	elasticsearch.InitClient()
+	elasticsearch.Init()
 
 	mapUrls()
+
 	srv := &http.Server{
 		Handler: router,
 		Addr:    "127.0.0.1:8080",

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/olivere/elastic/v7"
-	"github.com/rmortale/bookstore_items-api/logger"
+	"github.com/rmortale/bookstore_utils-go/logger"
 )
 
 var (
@@ -20,9 +20,12 @@ type esClient struct {
 	client *elastic.Client
 }
 
-func InitClient() {
+func Init() {
+	log := logger.GetLogger()
 	client, err := elastic.NewClient(
 		elastic.SetURL("http://127.0.0.1:9200"),
+		elastic.SetErrorLog(log),
+		elastic.SetInfoLog(log),
 	)
 	if err != nil {
 		panic(err)

@@ -31,14 +31,14 @@ func (c *itemsController) Create(w http.ResponseWriter, r *http.Request) {
 	sellerId := oauth.GetCallerId(r)
 	if sellerId == 0 {
 		respErr := rest_errors.NewUnauthorizedError("unable to retrieve user information")
-		http_utils.RespondErrorJson(w, *respErr)
+		http_utils.RespondErrorJson(w, respErr)
 		return
 	}
 
 	requestBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		respErr := rest_errors.NewBadRequestError("invalid request body")
-		http_utils.RespondErrorJson(w, *respErr)
+		http_utils.RespondErrorJson(w, respErr)
 		return
 	}
 	defer r.Body.Close()
@@ -46,7 +46,7 @@ func (c *itemsController) Create(w http.ResponseWriter, r *http.Request) {
 	var itemRequest items.Item
 	if err := json.Unmarshal(requestBody, &itemRequest); err != nil {
 		respErr := rest_errors.NewBadRequestError("invalid json body")
-		http_utils.RespondErrorJson(w, *respErr)
+		http_utils.RespondErrorJson(w, respErr)
 		return
 	}
 
@@ -54,7 +54,7 @@ func (c *itemsController) Create(w http.ResponseWriter, r *http.Request) {
 
 	result, createErr := services.ItemsService.Create(itemRequest)
 	if createErr != nil {
-		http_utils.RespondErrorJson(w, *createErr)
+		http_utils.RespondErrorJson(w, createErr)
 		return
 	}
 	http_utils.RespondJson(w, http.StatusCreated, result)
